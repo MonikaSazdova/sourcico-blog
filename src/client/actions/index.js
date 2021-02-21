@@ -13,3 +13,9 @@ export const selectPost = post => {
 		payload: post
 	})
 }
+
+//action for fetching comments
+export const fetchComments = (id) => async dispatch => {
+	const response = await jsonPlaceholder.get(`/comments?postId=${id}`);
+	dispatch({type: 'FETCH_COMMENTS', payload: response.data})
+}

@@ -1,6 +1,4 @@
 import React from 'react';
-import PostDetails from './PostDetails';
-// import Comments from './Comments';
 import { connect } from 'react-redux';
 import { fetchPosts, selectPost } from '../actions';
 import '../styles/posts.scss';
@@ -13,8 +11,7 @@ class Posts extends React.Component {
 
 	renderPosts() {
 		return this.props.posts.map(post => {
-			if (post.id <= 10) 
-				
+			if (post.id <= 10) 				
 			return (
 				<div className='item' key={post.id}>
 					<div className="title">

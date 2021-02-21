@@ -1,7 +1,10 @@
 @import './utillities.scss';
 
 .post-details {
+	padding-top: 20px;
 	background-color: $color-greenblue;
+	justify-content: center;
+	text-align: center;
 	padding: 20px;
 	height: 100%;
 	@include xs {
