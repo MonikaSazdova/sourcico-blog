@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { fetchComments } from '../actions'
 
 
+
 class Comments extends React.Component {
 	componentDidMount() {
 		this.props.fetchComments(this.props.postId)
 	}
 
 	renderComments() {
+		console.log(this.props.comments)
 		return this.props.comments.map(comment => {
 			return (
 				<div className="comment" key={comment.id}>

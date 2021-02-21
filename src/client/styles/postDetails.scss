@@ -3,12 +3,14 @@
 .post-details {
 	padding-top: 20px;
 	background-color: $color-greenblue;
-	justify-content: center;
-	text-align: center;
 	padding: 20px;
 	height: 100%;
 	@include xs {
 		grid-row: 2;
 		grid-column: 1 / 4;
+	}
+	.post-content {
+		justify-content: center;
+		text-align: center;
 	}
 }

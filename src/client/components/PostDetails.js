@@ -8,10 +8,12 @@ const PostDetails = ({ post }) => {
 	}
 	return (
 		<div className="post-details">
-			<h3>{post.title}</h3>
-			<p>{post.body}</p>
-			<hr />
-			<div>
+			<div className="post-content">
+				<h3>{post.title}</h3>
+				<p>{post.body}</p>
+				<hr/>
+			</div>
+			<div className="comments-detail">
 				<Comments postId={post.id}/>
 			</div>
 		</div>
