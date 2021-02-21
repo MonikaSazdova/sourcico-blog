@@ -9,3 +9,5 @@ const PostDetails = () => {
 }
 
 export default PostDetails;
+
+//dali vo state ima post 

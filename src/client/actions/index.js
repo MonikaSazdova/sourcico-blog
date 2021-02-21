@@ -7,9 +7,9 @@ export const fetchPosts = () => async dispatch => {
 };
 
 //action for selecting a post
-export const selectPost = id => {
+export const selectPost = post => {
 	return ({
 		type: 'POST_SELECTED',
-		payload: id
+		payload: post
 	})
 }
