@@ -1,0 +1,17 @@
+$baseColor: rgb(247, 247, 247);
+$color-greenblue: #b3e0da;
+$color-lightblue: #d4f9ff;
+$color-midblue: #7882f3;
+$color-darkblue: #4757a4;
+
+@mixin theme-darkblue {
+	background-color: $color-darkblue;
+	color: white;
+}
+
+/* media query */
+@mixin xs {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}

@@ -6,4 +6,10 @@ export const fetchPosts = () => async dispatch => {
 	dispatch({type: 'FETCH_POSTS', payload: response.data})
 };
 
-
+//action for selecting a post
+export const selectPost = id => {
+	return ({
+		type: 'POST_SELECTED',
+		payload: id
+	})
+}

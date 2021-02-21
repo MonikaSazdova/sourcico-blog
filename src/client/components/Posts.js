@@ -1,8 +1,10 @@
 import React from 'react';
 import PostDetails from './PostDetails';
-import Comments from './Comments';
+// import Comments from './Comments';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions';
+import '../styles/posts.scss';
+
 
 class Posts extends React.Component {
 	componentDidMount() {
@@ -17,10 +19,13 @@ class Posts extends React.Component {
 		return this.props.posts.map(post => {
 			return (
 				<div className='item' key={post.id}>
-					<div className="title">{post.title}</div>
-						<button>Open</button>
+					<div className="title">
+						<h4>{post.title}</h4>
+						</div>
+					<button
+						onClick={() => this.props.selectPost(post)}
+					>Open</button>
 					<hr/>
-					<br/>
 				</div>
 			)
 		})
@@ -37,7 +42,12 @@ class Posts extends React.Component {
 }
 
 const mapStateToProps = state => {
-	return { posts: state.posts }
+	return {
+		posts: state.posts,
+		selectedPost: state.post
+	}
 };
 
-export default connect(mapStateToProps, { fetchPosts })(Posts);
+
+
+export default connect(mapStateToProps, {fetchPosts})(Posts);

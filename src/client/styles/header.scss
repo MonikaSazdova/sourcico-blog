@@ -1,0 +1,17 @@
+@import './utillities.scss';
+
+header {
+	padding: 20px;
+	// margin-bottom: 10px;
+	grid-column: 1 / 3;
+	grid-row: 1;
+	@include theme-darkblue;
+	.blog-name {
+		justify-content: flex-start;
+		font-weight: bold;
+		@include xs {
+			justify-content: center;
+		}
+	}
+}
+	

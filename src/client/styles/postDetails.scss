@@ -1,0 +1,18 @@
+@import './utillities.scss';
+
+.post-details {
+	background-color: $color-greenblue;
+	padding: 20px;
+	height: 100%;
+	// margin-bottom: 5px;
+	// h1 {
+	// 	margin-top: 0;
+	// }
+	// p {
+	// 	max-width: 500px;
+	// }
+	@include xs {
+		grid-row: 2;
+		grid-column: 1 / 4;
+	}
+}
