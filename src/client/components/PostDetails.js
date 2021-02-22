@@ -1,8 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector} from 'react-redux';
 import Comments from './Comments'
 
-const PostDetails = ({ post }) => {
+const PostDetails = () => {
+	const post = useSelector(state => state.selectedPost)
+
 	if (!post) {
 		return <div>Select a post</div>
 	}
@@ -20,11 +22,6 @@ const PostDetails = ({ post }) => {
 	)
 }
 
-const mapStateToProps = state => {
-	return {post: state.selectedPost}
-}
 
+export default PostDetails;
 
-export default connect(mapStateToProps)(PostDetails);
-
-//dali vo state ima post 
