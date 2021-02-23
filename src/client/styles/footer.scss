@@ -3,8 +3,10 @@ footer {
 	text-align: center;
 	padding: 20px;
 	grid-column: 1 / 3;
+	// box-shadow:4px 0px 4px 0px $color-border;
+	border-top: 1px solid $color-border;
+	background-color: $dark-background-one;
 	@include xs {
 		grid-row: 4;
 	}
-	@include theme-darkblue;
 }

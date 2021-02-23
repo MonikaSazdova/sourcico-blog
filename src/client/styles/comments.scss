@@ -1,9 +1,32 @@
 @import './utillities.scss';
 
-h5 {
-	margin-bottom: 0;
+
+.comment{
+	background-color: $dark-background-one;
+margin-left: 20px;
+width: 80vh;
+// margin-left: 20vh;
+	.content {
+		background-color: rgb(71, 70, 70);
+		color: rgb(201, 201, 201);
+		width: 80vh;
+		padding-left: 20px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ 		transition: 0.3s;
+		 border-radius: 10px;
+		 &:hover {
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		 }
+		 h5 {
+			 font-size: small;
+			margin-bottom: 0;
+		}
+		
+		p {
+			font-size: x-small;
+			margin-top: 0;
+			padding-right: 10px;
+		}
+	}
 }
 
-p {
-	margin-top: 0;
-}

@@ -1,12 +1,25 @@
 $baseColor: rgb(247, 247, 247);
-$color-greenblue: #b3e0da;
-$color-lightblue: #d4f9ff;
-$color-midblue: #7882f3;
-$color-darkblue: #4757a4;
+$color-white: white;
+// $color-greenblue: #b3e0da;
+// $color-lightblue: #d4f9ff;
+// $color-midblue: #7882f3;
+// $color-darkblue: #4757a4;
+$color-border: #8c8b8c;
+$color-background: rgb(224, 223, 223);
+$dark-background-one: rgb(30, 30, 30);
+$dark-background-two: rgb(39, 39, 39);
 
-@mixin theme-darkblue {
-	background-color: $color-darkblue;
-	color: white;
+$color-yellow: rgba(255, 211, 13, 0.796);
+
+
+// @mixin theme-darkblue {
+// 	background-color: $color-darkblue;
+// 	color: white;
+// }
+
+@mixin theme-white {
+  background-color: $color-white;
+  color: white;
 }
 
 /* media query */

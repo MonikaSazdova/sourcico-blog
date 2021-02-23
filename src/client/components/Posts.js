@@ -10,21 +10,19 @@ const Posts = () => {
 	useEffect(() => {
 		dispatch(fetchPosts());
 	}, [])
-	
-	// useEffect(() => {
-	// 	console.log(posts)
-	// }, [posts])
 
 	const renderPosts = () => { 
 		return posts.map(post => {
-			if (post.id <= 10) {
+			if (post.id <= 15) {
 						return (
-							<div className='item' key={post.id}>
+							<div
+								className='item'
+								key={post.id}
+								onClick={() => {dispatch(selectPost(post)) }}
+							>
 								<div className="title">
-									<h4>{post.title}</h4>
+									<h5>{post.title.charAt(0).toUpperCase(0) + post.title.slice(1)}</h5>
 								</div>
-								<button onClick={() => {dispatch(selectPost(post)) }}>Open</button>
-								<hr />
 							</div>
 						)
 					}

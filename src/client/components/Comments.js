@@ -22,7 +22,6 @@ const Comments = ({postId}) => {
 						<h5>{comment.name}</h5>
 						<p>{comment.body}</p>
 					</div>
-					<hr />
 				</div>
 			)
 		})
